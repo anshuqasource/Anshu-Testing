@@ -31,7 +31,7 @@ def test_gmail_login():
             
             # Click Next button
             page.locator("#identifierNext").click()
-            print("✓ Clicked Next button")
+            print("✓ Clicked Next button to proceed")
             
             # Wait and enter password
             page.locator("#password").wait_for(timeout=10000)
