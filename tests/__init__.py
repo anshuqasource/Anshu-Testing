@@ -1,0 +1,3 @@
+"""
+Tests package for the automation framework
+"""
