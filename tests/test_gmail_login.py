@@ -57,3 +57,4 @@ def test_gmail_login():
         
         finally:
             browser.close()
+            print("browser closed")
