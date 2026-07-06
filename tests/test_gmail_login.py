@@ -11,7 +11,7 @@ def test_gmail_login():
     Test Gmail login with valid credentials
     """
     # Gmail credentials
-    EMAIL = "anshu.sood5@gmail.com"
+    EMAIL = "testautomation.edhas@gmail.com"
     PASSWORD = "P@ssw0rdistarunabagish28!"
     
     # Launch browser with arguments to bypass security checks
