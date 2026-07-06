@@ -38,6 +38,7 @@ env/
 htmlcov/
 .tox/
 report.html
+tests/*.png
 
 # OS
 .DS_Store

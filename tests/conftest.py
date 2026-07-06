@@ -4,7 +4,6 @@ Pytest configuration and shared fixtures
 
 import pytest
 import logging
-import os
 from datetime import datetime
 from playwright.sync_api import sync_playwright
 
@@ -93,31 +92,6 @@ def page(request):
     page.close()
     browser.close()
     playwright.stop()
-
-
-@pytest.fixture
-def gmail_credentials():
-    """
-    Provide Gmail credentials for testing
-    
-    NOTE: Update with your test Gmail credentials or use environment variables:
-    - GMAIL_TEST_EMAIL
-    - GMAIL_TEST_PASSWORD
-    
-    WARNING: Never commit real credentials to version control!
-    Use environment variables or a secure credential manager.
-    """
-    email = os.getenv("GMAIL_TEST_EMAIL", "your-test-email@gmail.com")
-    password = os.getenv("GMAIL_TEST_PASSWORD", "your-test-password")
-    
-    # Validate that credentials are set
-    if "your-test-email" in email or "your-test-password" in password:
-        pytest.skip("Gmail credentials not configured. Set GMAIL_TEST_EMAIL and GMAIL_TEST_PASSWORD environment variables.")
-    
-    return {
-        "email": email,
-        "password": password
-    }
 
 
 def pytest_addoption(parser):
