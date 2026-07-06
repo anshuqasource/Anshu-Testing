@@ -17,7 +17,7 @@ def test_gmail_login():
     # Launch browser with arguments to bypass security checks
     with sync_playwright() as p:
         browser = p.chromium.launch(
-            headless=False,
+            headless=True,
             args=[
                 "--disable-blink-features=AutomationControlled",
                 "--disable-web-resources-dep-check"
