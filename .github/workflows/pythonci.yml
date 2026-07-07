@@ -46,4 +46,4 @@ jobs:
       with:
           context: .
           push: true
-          tags: anshusood/anshu-docker:latest
+          tags: anshusood/anshu-docker:anshulatestimage
